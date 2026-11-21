@@ -56,7 +56,6 @@ namespace FlottaKlienses
 
         private async void mentes(object sender, RoutedEventArgs e) {
             string url = "api/User/GetAllUser";
-
             DataGrid.ItemsSource = await kliens.GetFromJsonAsync<List<User>>(url);
         }
     }
