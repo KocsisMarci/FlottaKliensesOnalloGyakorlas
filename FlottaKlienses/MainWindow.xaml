@@ -1,0 +1,28 @@
+﻿<Window x:Class="FlottaKlienses.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlottaKlienses"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Label Content="Név"/>
+            <TextBox TextWrapping="Wrap" x:Name="nev" Width="120"/>
+
+            <Label Content="Jelszó"/>
+            <TextBox TextWrapping="Wrap" x:Name="jelszo" Width="120"/>
+            <Button Width="110" Margin="0 20 0 0" Click="bejelentkezes" Content="Bejelentkezés"/>
+            <Button Width="110" Margin="0 20 0 0" Click="mentes" Content="Beolvasás"/>
+            <TextBlock x:Name="adott"></TextBlock>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGrid" Grid.Column="1"></DataGrid>
+    </Grid>
+</Window>
